@@ -1,0 +1,62 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.game-screen {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background-color: skyblue;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.obstacle {
+  position: absolute;
+  width: 80px;
+  background-color: green;
+}
+
+.bird {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+}
+
+.game-over-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-over h1 {
+  margin-bottom: 20px;
+}
+
+.score {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.game-over .bird-fall {
+  animation: bird-fall-animation 0.5s linear infinite;
+}
+
+@keyframes bird-fall-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.game-over.game-over-screen .bird-fall {
+  animation: none;
+}
